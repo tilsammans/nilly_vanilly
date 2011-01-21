@@ -1,17 +1,14 @@
 require 'rake'
 require 'rake/rdoctask'
-
-desc 'Default: run specs.'
-task :default => :spec
-
 require 'jeweler'
+
 Jeweler::Tasks.new do |gem|
   gem.name = "nilly_vanilly"
   gem.homepage = "http://github.com/tilsammans/nilly_vanilly"
   gem.summary = %Q{This plugin stores NULL in your database when you try to store an empty string.}
   gem.email = "joost@spacebabies.nl"
   gem.authors = ["Joost Baaij"]
-  gem.add_runtime_dependency 'activerecord', '~> 2.3'
+  gem.add_runtime_dependency 'activerecord', '>= 2'
   gem.add_development_dependency 'rspec', '~> 1.3.1'
   gem.add_development_dependency 'jeweler', '~> 0.5.2'
 end
