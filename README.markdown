@@ -58,7 +58,8 @@ Me: if you don't care, just move along. And would I recommend you nillify
 every attribute in your application? No. But beside from the fact that NULL
 is the "correct" value for something you don't know, enforcing this is
 required if you have a unique index on that column. Unique indexes are the
-fastest you can have, and they deal great with NULL values.
+fastest you can have, and they deal great with NULL values. Empty strings?
+Not so much so.
 
 
 Author
