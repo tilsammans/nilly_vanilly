@@ -1,2 +1,8 @@
 spec/debug.log
 nilly_vanilly.sqlite3
+coverage
+rdoc
+doc
+.yardoc
+.bundle
+pkg
