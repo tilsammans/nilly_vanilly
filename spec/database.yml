@@ -1,0 +1,17 @@
+sqlite3:
+  adapter: sqlite3
+  database: nilly_vanilly.sqlite3
+
+mysql:
+  adapter: mysql
+  hostname: localhost
+  username: root
+  password:
+  database: nilly_vanilly
+
+postgresql:
+  adapter: postgresql
+  hostname: localhost
+  username: postgres
+  password:
+  database: nilly_vanilly
