@@ -27,6 +27,10 @@ Installation
 
     ./script/plugin install git://github.com/tilsammans/nilly_vanilly.git
 
+You can also install this plugin as a gem, but then you won't have the fancy
+rake task to inspect your database. But you'll gain the ability to upgrade
+easily when I release a new version. Choices!
+
 
 Inspection
 ==========
