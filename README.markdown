@@ -28,8 +28,11 @@ Installation
     ./script/plugin install git://github.com/tilsammans/nilly_vanilly.git
 
 You can also install this plugin as a gem, but then you won't have the fancy
-rake task to inspect your database. But you'll gain the ability to upgrade
-easily when I release a new version. Choices!
+rake task to inspect your database (see below). But you'll gain the ability
+to upgrade easily when I release a new version. And you can always run the
+inspection using script/runner:
+
+    ./script/runner "NillyVanilly::Inspect.print"
 
 
 Inspection
@@ -45,6 +48,17 @@ nil by default are shown, i.e. all these columns should be safe to nillify.
 This does not take into account any validations you might have.
 
 When a column has already been nillified, it will be indicated with [OK].
+
+
+But WHY?!!
+==========
+
+You: who cares that empty strings are stored in the database?
+Me: if you don't care, just move along. And would I recommend you nillify
+every attribute in your application? No. But beside from the fact that NULL
+is the "correct" value for something you don't know, enforcing this is
+required if you have a unique index on that column. Unique indexes are the
+fastest you can have, and they deal great with NULL values.
 
 
 Author

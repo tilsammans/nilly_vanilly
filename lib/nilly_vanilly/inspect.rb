@@ -1,4 +1,5 @@
 module NillyVanilly
+  # Inspect the database schema, in a quest to find columns suitable for nillification.
   class Inspect
     # Print an inspection report to stdout.
     def self.print
