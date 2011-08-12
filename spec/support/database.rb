@@ -2,7 +2,7 @@ require 'yaml'
 
 ENV['DB'] ||= 'sqlite3'
 
-database_yml = File.expand_path('../database.yml', __FILE__)
+database_yml = File.expand_path('../../db/database.yml', __FILE__)
 if File.exists?(database_yml)
   active_record_configuration = YAML.load_file(database_yml)[ENV['DB']]
   
@@ -17,7 +17,7 @@ if File.exists?(database_yml)
   end  
   
 else
-  raise "Please create #{database_yml} first to configure your database. Take a look at: #{database_yml}.sample"
+  raise "Please create #{database_yml} first to configure your database. Take a look at: #{database_yml}.example"
 end
 
 def clean_database!
