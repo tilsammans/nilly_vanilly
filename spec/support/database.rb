@@ -12,8 +12,8 @@ if File.exists?(database_yml)
   ActiveRecord::Base.silence do
     ActiveRecord::Migration.verbose = false
     
-    load(File.dirname(__FILE__) + '/schema.rb')
-    load(File.dirname(__FILE__) + '/models.rb')
+    load(File.dirname(__FILE__) + '/../db/schema.rb')
+    load(File.dirname(__FILE__) + '/../db/models.rb')
   end  
   
 else
