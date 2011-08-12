@@ -7,7 +7,7 @@ if File.exists?(database_yml)
   active_record_configuration = YAML.load_file(database_yml)[ENV['DB']]
   
   ActiveRecord::Base.establish_connection(active_record_configuration)
-  ActiveRecord::Base.logger = Logger.new(File.join(File.dirname(__FILE__), "debug.log"))
+  ActiveRecord::Base.logger = Logger.new(File.join(File.dirname(__FILE__), "../debug.log"))
   
   ActiveRecord::Base.silence do
     ActiveRecord::Migration.verbose = false
