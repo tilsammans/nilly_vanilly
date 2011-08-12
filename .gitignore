@@ -6,3 +6,4 @@ doc
 .yardoc
 .bundle
 pkg
+spec/db/database.yml
