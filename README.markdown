@@ -1,7 +1,7 @@
 NillyVanilly
 ============
 
-This plugin stores NULL in your database when you try to store an empty string.
+This Rails gem/plugin stores NULL in your database when you try to store an empty string.
 
 It only works for columns you explicitly mention inside your model. It comes
 with a rake task which prints out all the columns eligible for nillification.
@@ -25,12 +25,23 @@ Example
 Installation
 ============
 
+The preferred method of installation is now as a gem.
+
+    config.gem 'nilly_vanilly'
+
+or, for Rails 3 with Bundler in your Gemfile:
+
+    gem 'nilly_vanilly'
+
+Previous versions of Nilly Vanilly were distributed as a Rails plugin. For Rails
+2 apps this might still work, but is not supported. If you absolutely need the
+Rake task in your Rails 2 app, you can:
+
     ./script/plugin install git://github.com/tilsammans/nilly_vanilly.git
 
-You can also install this plugin as a gem, but then you won't have the fancy
-rake task to inspect your database (see below). But you'll gain the ability
-to upgrade easily when I release a new version. And you can always run the
-inspection using script/runner:
+Installation as a plugin in Rails 2 adds a rake task you can run to find suitable
+columns for nillification. For Rails 3, I will add this task in a future version.
+Until then you can find the same information by running:
 
     ./script/runner "NillyVanilly::Inspect.print"
 
@@ -60,6 +71,14 @@ is the "correct" value for something you don't know, enforcing this is
 required if you have a unique index on that column. Unique indexes are the
 fastest you can have, and they deal great with NULL values. Empty strings?
 Not so much so.
+
+
+Contributing
+============
+
+Fork and clone the repo and hack away.
+
+It is very important you *must* run the specs before sending a pull request.
 
 
 Author
