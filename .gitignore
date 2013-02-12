@@ -7,3 +7,4 @@ doc
 .bundle
 spec/db/database.yml
 *.gem
+.ruby-version
