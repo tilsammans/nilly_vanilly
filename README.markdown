@@ -20,30 +20,16 @@ Example
 
     comment = Comment.create :author_url => ""
     comment.author_url        # -> nil
-  
+
 
 Installation
 ============
 
-The preferred method of installation is now as a gem.
-
-    config.gem 'nilly_vanilly'
-
-or, for Rails 3 with Bundler in your Gemfile:
+Install this gem using Bundler:
 
     gem 'nilly_vanilly'
 
-Previous versions of Nilly Vanilly were distributed as a Rails plugin. For Rails
-2 apps this might still work, but is not supported. If you absolutely need the
-Rake task in your Rails 2 app, you can:
-
-    ./script/plugin install git://github.com/tilsammans/nilly_vanilly.git
-
-Installation as a plugin in Rails 2 adds a rake task you can run to find suitable
-columns for nillification. For Rails 3, I will add this task in a future version.
-Until then you can find the same information by running:
-
-    ./script/runner "NillyVanilly::Inspect.print"
+and then run `bundle`.
 
 
 Inspection
