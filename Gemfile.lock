@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    nilly_vanilly (0.2.0)
+    nilly_vanilly (0.3.0)
 
 GEM
   remote: http://rubygems.org/
@@ -10,6 +10,7 @@ GEM
       activesupport (= 2.3.12)
     activesupport (2.3.12)
     diff-lcs (1.1.2)
+    rake (10.0.3)
     rspec (2.6.0)
       rspec-core (~> 2.6.0)
       rspec-expectations (~> 2.6.0)
@@ -26,5 +27,6 @@ PLATFORMS
 DEPENDENCIES
   activerecord (>= 2)
   nilly_vanilly!
+  rake
   rspec
   sqlite3

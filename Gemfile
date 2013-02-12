@@ -5,3 +5,4 @@ gemspec
 gem 'activerecord', '>= 2'
 gem 'rspec'
 gem 'sqlite3'
+gem 'rake'
