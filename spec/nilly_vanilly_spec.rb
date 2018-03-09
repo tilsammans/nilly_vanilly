@@ -1,20 +1,18 @@
-require 'spec_helper'
-
-describe NillyVanilly do
+RSpec.describe NillyVanilly, type: :model do
   describe "model with one column" do
     it "stores class methods" do
-      Post.nillify_attributes.should == [:title]
+      expect(Post.nillify_attributes).to eq [:title]
     end
 
     it "stores nil for empty string" do
       post = Post.create! :title => ""
-      post.title.should be_nil
+      expect(post.title).to be_nil
     end
   end
-  
+
   describe "model with two columns" do
     it "stores class methods" do
-      Comment.nillify_attributes.should == [:author, :author_email]
+      expect(Comment.nillify_attributes).to eq [:author, :author_email]
     end
   end
 end

@@ -7,3 +7,6 @@ if defined?(ActiveRecord::Base)
 end
 
 require "nilly_vanilly/railtie" if defined?(Rails)
+
+module NillyVanilly
+end
