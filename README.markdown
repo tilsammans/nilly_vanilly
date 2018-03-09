@@ -2,6 +2,8 @@
 
 This Rails gem/plugin stores NULL in your database when you try to store an empty string.
 
+[![Build Status](https://travis-ci.org/tilsammans/nilly_vanilly.svg?branch=master)](https://travis-ci.org/tilsammans/nilly_vanilly)
+
 It only works for columns you explicitly mention inside your model. It comes
 with a rake task which prints out all the columns eligible for nillification.
 
