@@ -1,8 +1,5 @@
-source "http://rubygems.org"
+source "https://rubygems.org"
+
+git_source(:github) {|repo_name| "https://github.com/#{repo_name}" }
 
 gemspec
-
-gem 'activerecord', '>= 2'
-gem 'rspec'
-gem 'sqlite3'
-gem 'rake'
