@@ -47,10 +47,11 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bundler (~> 2.1)
   nilly_vanilly!
   rake (>= 12.3.3)
   rspec (~> 3.7)
   sqlite3 (~> 1.4)
 
 BUNDLED WITH
-   1.17.2
+   2.1.4
